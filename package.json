@@ -5,7 +5,7 @@
   "keywords": [],
   "author": "ThunderMiracle",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thundermiracle/typescript-library-boilerplate.git"
@@ -25,10 +25,11 @@
     "emit:types": "tsc --emitDeclarationOnly",
     "build:types": "yarn emit:types",
     "build:js": "tsc",
-    "prebuild": "rimraf dist/",
-    "build": "yarn build:types && yarn build:js",
-    "bundle": "webpack",
-    "bundle:w": "webpack -w"
+    "webpack:dev": "webpack --config webpack.dev.js",
+    "webpack:prod": "webpack --config webpack.prod.js",
+    "bundle": "yarn webpack:dev && yarn webpack:prod",
+    "prebuild": "rimraf lib/ && rimraf dist/",
+    "build": "yarn build:types && yarn build:js && yarn bundle"
   },
   "devDependencies": {
     "@babel/types": "^7.7.4",
