@@ -1,6 +1,12 @@
 module.exports = {
   mode: 'development',
   entry: './src/index.ts',
+  output: {
+    library: 'Add',
+    libraryTarget: 'umd',
+    libraryExport: 'default',
+    filename: 'main.js',
+  },
   module: {
     rules: [
       {

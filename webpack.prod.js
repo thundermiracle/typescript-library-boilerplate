@@ -5,6 +5,9 @@ module.exports = {
   mode: 'production',
   entry: './src/index.ts',
   output: {
+    library: 'Add',
+    libraryTarget: 'umd',
+    libraryExport: 'default',
     filename: 'main.min.js',
   },
   module: {
