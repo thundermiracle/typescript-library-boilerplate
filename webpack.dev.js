@@ -5,7 +5,7 @@ module.exports = {
     library: 'Add',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    filename: 'main.js',
+    filename: 'bundle.js',
   },
   module: {
     rules: [

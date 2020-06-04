@@ -8,7 +8,7 @@ module.exports = {
     library: 'Add',
     libraryTarget: 'umd',
     libraryExport: 'default',
-    filename: 'main.min.js',
+    filename: 'bundle.min.js',
   },
   module: {
     rules: [
